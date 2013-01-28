@@ -6,7 +6,7 @@ This is the `sass` edition of the [google-bootstrap](http://todc.github.com/goog
 
 Add this line to your application's Gemfile:
 
-    gem 'bootstrap-sass-google'
+    gem 'bootstrap-google-sass'
 
 And then execute:
 
@@ -14,7 +14,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bootstrap-sass-google
+    $ gem install bootstrap-google-sass
 
 ## Usage
 
