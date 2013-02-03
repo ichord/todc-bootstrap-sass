@@ -95,10 +95,10 @@ input[type="radio"] {
   position: relative;
 
   // override styles for IE
-  box-sizing: content-box e("\9");
-  width: 16px e("\9");
-  height: 16px e("\9");
-  border-width: 0 e("\9");
+  box-sizing: content-box \9;
+  width: 16px \9;
+  height: 16px \9;
+  border-width: 0 \9;
 }
 input[type="radio"] {
   @include border-radius(1em);
@@ -110,7 +110,7 @@ input[type="checkbox"]:hover {
   @include box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.1));
 
   // no box shadow for IE
-  box-shadow: none e("\9");
+  box-shadow: none \9;
 }
 input[type="checkbox"]:active,
 input[type="radio"]:active {

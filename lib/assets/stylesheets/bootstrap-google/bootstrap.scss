@@ -1,29 +1,12 @@
-/*!
- * Bootstrap v2.2.2
- *
- * Copyright 2012 Twitter, Inc
- * Licensed under the Apache License v2.0
- * http://www.apache.org/licenses/LICENSE-2.0
- *
- * Designed and built with all the love in the world @twitter by @mdo and @fat.
- */
 
 // Core variables and mixins
 @import "bootstrap-google/variables"; // Modify this for custom colors, font-sizes, etc
-@import "bootstrap-google/mixins";
 @import "bootstrap-google/google-mixins";
-
-// CSS Reset
-@import "bootstrap-google/reset";
 
 // Grid system and page structure
 @import "bootstrap-google/scaffolding";
-@import "bootstrap-google/grid";
-@import "bootstrap-google/layouts";
 
 // Base CSS
-@import "bootstrap-google/type";
-@import "bootstrap-google/code";
 @import "bootstrap-google/forms";
 @import "bootstrap-google/tables";
 
@@ -31,8 +14,6 @@
 @import "bootstrap-google/sprites";
 @import "bootstrap-google/dropdowns";
 @import "bootstrap-google/wells";
-@import "bootstrap-google/component-animations";
-@import "bootstrap-google/close";
 @import "bootstrap-google/scrollbars";
 
 // Components: Buttons & Alerts
@@ -53,13 +34,5 @@
 @import "bootstrap-google/popovers";
 
 // Components: Misc
-@import "bootstrap-google/thumbnails";
-@import "bootstrap-google/media";
 @import "bootstrap-google/labels-badges";
 @import "bootstrap-google/progress-bars";
-@import "bootstrap-google/accordion";
-@import "bootstrap-google/carousel";
-@import "bootstrap-google/hero-unit";
-
-// Utility classes
-@import "bootstrap-google/utilities"; // Has to be last to override when necessary
