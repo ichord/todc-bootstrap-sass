@@ -78,6 +78,18 @@
     $shadow-1: -compass-space-list(compact(if($default-box-shadow-inset, inset, false), $default-box-shadow-h-offset, $default-box-shadow-v-offset, $default-box-shadow-blur, $default-box-shadow-spread, $default-box-shadow-color)); }
   $shadow: compact($shadow-1, $shadow-2, $shadow-3, $shadow-4, $shadow-5, $shadow-6, $shadow-7, $shadow-8, $shadow-9, $shadow-10);
   @include experimental(box-shadow, $shadow, -moz, -webkit, not -o, not -ms, not -khtml, official); }
+
+$experimental-support-for-mozilla: true;
+$experimental-support-for-webkit: true;
+$experimental-support-for-gradients: true;
+$experimental-support-for-microsoft: true;
+$experimental-support-for-opera: true;
+
+
+$experimental-support-for-khtml: false;
+$experimental-support-for-svg: false;
+$experimental-support-for-pie: false;
+
 @mixin experimental($property, $value, $moz: $experimental-support-for-mozilla, $webkit: $experimental-support-for-webkit, $o: $experimental-support-for-opera, $ms: $experimental-support-for-microsoft, $khtml: $experimental-support-for-khtml, $official: true) {
   @if $webkit and $experimental-support-for-webkit {
     -webkit-#{$property}: $value; }
