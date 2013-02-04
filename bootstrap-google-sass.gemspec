@@ -14,4 +14,9 @@ Gem::Specification.new do |gem|
   gem.name          = "bootstrap-google-sass"
   gem.require_paths = ["lib"]
   gem.version       = Bootstrap::Google::Sass::VERSION
+
+
+  gem.add_development_dependency 'compass'
+  gem.add_development_dependency 'sass-rails', '~> 3.2'
+  gem.add_runtime_dependency     'sass',       '~> 3.2'  
 end
