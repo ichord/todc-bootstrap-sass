@@ -1,5 +1,7 @@
 # Bootstrap::Google::Sass
 
+The scss files are translated form [TODC Bootstrap](http://todc.github.com/todc-bootstrap/) project.
+
 This is the `sass` edition of the [google-bootstrap](http://todc.github.com/google-bootstrap) project.  
 Now, it's Non-Rails supported now.
 
