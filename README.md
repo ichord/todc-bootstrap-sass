@@ -1,6 +1,7 @@
 # Bootstrap::Google::Sass
 
 This is the `sass` edition of the [google-bootstrap](http://todc.github.com/google-bootstrap) project.  
+Now, it's Non-Rails supported now.
 
 ## Installation
 
@@ -30,6 +31,10 @@ just like it:
 ```
 
 and then, enjoy it.
+
+### One more thing.
+You can now running testing by issue `rake test`.  
+And, issue `rake css` to generate a full support `css` edition without another gem and css file.
 
 ## Contributing
 
