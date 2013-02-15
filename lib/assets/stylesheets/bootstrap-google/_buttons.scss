@@ -172,37 +172,37 @@
 // Primary Button
 // -------------------------
 .btn-primary {
-  @include btnBackground(#4d90fe, #4787ed, #fff, #3079ed);
+  @include btnBackground($btnGooglePrimaryStartColor, $btnGooglePrimaryEndColor, $btnGooglePrimaryTextColor, $btnGooglePrimaryBorderColor);
 }
 
 // Danger Button
 // -------------------------
 .btn-danger {
-  @include btnBackground(#dd4b39, #d14836, #fff, #C6322A);
+  @include btnBackground($btnGoogleDangerStartColor, $btnGoogleDangerEndColor, $btnGoogleDangerTextColor, $btnGoogleDangerBorderColor);
 }
 
 // Warning Button
 // -------------------------
 .btn-warning {
-  @include btnBackground(lighten($orange, 15%), lighten($orange, 10%), #fff, darken($btnWarningBackground, 3%));
+  @include btnBackground($btnGoogleWarningStartColor, $btnGoogleWarningEndColor, $btnGoogleWarningTextColor, $btnGoogleWarningBorderColor);
 }
 
 // Success Button
 // -------------------------
 .btn-success {
-  @include btnBackground(#35aa47, #35aa47, #fff, #359947);
+  @include btnBackground($btnGoogleSuccessStartColor, $btnGoogleSuccessEndColor, $btnGoogleSuccessTextColor, $btnGoogleSuccessBorderColor);
 }
 
 // Info Button
 // -------------------------
 .btn-info {
-  @include btnBackground($btnInfoBackground, $btnInfoBackground, #fff, darken($btnInfoBackground, 5%));
+  @include btnBackground($btnGoogleInfoStartColor, $btnGoogleInfoEndColor, $btnGoogleInfoTextColor, $btnGoogleInfoBorderColor);
 }
 
 // Inverse Button
 // -------------------------
 .btn-inverse {
-  @include btnBackground(lighten($btnInverseBackground, 1%), lighten($btnInverseBackground, 1%), #fff, darken($btnInverseBackground, 3%));
+  @include btnBackground($btnGoogleInverseStartColor, $btnGoogleInverseEndColor, $btnGoogleInverseTextColor, $btnGoogleInverseBorderColor);
 }
 
 
