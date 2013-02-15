@@ -106,6 +106,37 @@ $btnDangerBackgroundHighlight:      #bd362f;
 $btnInverseBackground:              #4e4e4e;
 $btnInverseBackgroundHighlight:     $grayDarker;
 
+$btnGoogleTextColor: $white !default;
+
+$btnGooglePrimaryStartColor: #4d90fe !default;
+$btnGooglePrimaryEndColor: #4787ed !default;
+$btnGooglePrimaryTextColor: $btnGoogleTextColor !default;
+$btnGooglePrimaryBorderColor: #3079ed !default;
+
+$btnGoogleDangerStartColor: #dd4b39 !default;
+$btnGoogleDangerEndColor: #d14836 !default;
+$btnGoogleDangerTextColor: $btnGoogleTextColor !default;
+$btnGoogleDangerBorderColor: #C6322A !default;
+
+$btnGoogleWarningStartColor: lighten($orange, 15%) !default;
+$btnGoogleWarningEndColor: lighten($orange, 10%) !default;
+$btnGoogleWarningTextColor: $btnGoogleTextColor !default;
+$btnGoogleWarningBorderColor: darken($btnWarningBackground, 3%) !default;
+
+$btnGoogleSuccessStartColor: #35aa47 !default;
+$btnGoogleSuccessEndColor: #35aa47 !default;
+$btnGoogleSuccessTextColor: $btnGoogleTextColor !default;
+$btnGoogleSuccessBorderColor: #359947 !default;
+
+$btnGoogleInfoStartColor: $btnInfoBackground !default;
+$btnGoogleInfoEndColor: $btnInfoBackground !default;
+$btnGoogleInfoTextColor: $btnGoogleTextColor !default;
+$btnGoogleInfoBorderColor: darken($btnInfoBackground, 5%) !default;
+
+$btnGoogleInverseStartColor: lighten($btnInverseBackground, 1%) !default;
+$btnGoogleInverseEndColor: lighten($btnInverseBackground, 1%) !default;
+$btnGoogleInverseTextColor: $btnGoogleTextColor !default;
+$btnGoogleInverseBorderColor: darken($btnInverseBackground, 3%) !default;
 
 // Forms
 // -------------------------
