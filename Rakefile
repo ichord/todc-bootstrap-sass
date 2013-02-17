@@ -30,12 +30,12 @@ task :translate do
 
   Dir["#{less_path}/*.less"].each do |less|
     File.open(less) do |lf|
-      buffer = lf.read.gsub(/@((?!mixin|include|while|import|media)\S+)/, "$\\1")
-        .gsub(/^\.(\S+)(\s?)\(/, "@mixin \\1\\2(")
-        .gsub(/\s\.(\S+)(\s?)\(/, " @include \\1\\2(")
-        .gsub(/#(\S+) > @include (\S+)\(/, "@include \\1-\\2(")
-        .gsub(/\(~"(.+)"\)/,"(\\1)")
-      # TODO: add patch
+      buffer = lf.read.gsub(/@((?!mixin|include|while|import|media)\S+)/, "$\\1") # translate less variable: @color -> $color
+        .gsub(/^\.(\S+)(\s?)\(/, "@mixin \\1\\2(") # translate less mixin defination: .box-shadow(xxxxxx) { -> @mixin box-shadown(xxxx) {
+        .gsub(/\s\.(\S+)(\s?)\(/, " @include \\1\\2(") # translate less function: .box-shadow(xxxx) -> @include box-shadow(xxxx)
+        .gsub(/#(\S+) > @include (\S+)\(/, "@include \\1-\\2(") # translate special less fucntion: #aaa > .bbb()  -> @include aaa-bbb()
+        .gsub(/\(~"(.+)"\)/,"(\\1)") # replace less escaping tag ~: box-shadow(~"xxx,x,x,x,xx,")
+        .gsub(/e\("(\S+)"\)/,"\\1") # replace e('\9')
       File.open("tmp/scss/_#{File.basename(less, ".*")}.scss", 'w+') { |f| f.write buffer }
     end
   end
