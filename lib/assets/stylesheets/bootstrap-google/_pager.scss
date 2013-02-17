@@ -1,13 +1,15 @@
-// PAGER
-// -----
+//
+// Pager pagination
+// --------------------------------------------------
+
 
 .pager li > a {
   padding: 4px 12px;
 
   border: 1px solid #dcdcdc;
-  //@include border-radius(2px);
+  //.border-radius(2px);
 
-  @include gradient-vertical(#f5f5f5,#f1f1f1);
+  @include gradient-vertical(#f5f5f5, #f1f1f1);
   @include reset-filter();
   background-color: #f5f5f5;
 
@@ -24,14 +26,14 @@
 .pager li > a:hover {
   border-color: #c6c6c6;
 
-  @include gradient-vertical(#f8f8f8,#f1f1f1);
+  @include gradient-vertical(#f8f8f8, #f1f1f1);
   @include reset-filter();
   background-color: #f1f1f1;
 
   @include box-shadow(0 1px 1px rgba(0,0,0,0.1));
 }
 .pager li > a:active {
-  @include gradient-vertical(#f6f6f6,#f1f1f1);
+  @include gradient-vertical(#f6f6f6, #f1f1f1);
   @include reset-filter();
   background-color: #f1f1f1;
 
@@ -42,7 +44,7 @@
   color: darken($white, 30%);
   border-color: darken($white, 15%);
 
-  @include gradient-vertical(#f5f5f5,#f1f1f1);
+  @include gradient-vertical(#f5f5f5, #f1f1f1);
   @include reset-filter();
   background-color: $btnBackground;
 

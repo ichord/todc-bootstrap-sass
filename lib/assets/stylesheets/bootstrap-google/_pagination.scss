@@ -36,11 +36,11 @@
 .pagination ul > .disabled > a:hover {
   color: darken($white, 30%);
   border-color: darken($white, 15%);
-
+  
   @include gradient-vertical(#f5f5f5,#f1f1f1);
   @include reset-filter();
   background-color: $btnBackground;
-
+  
   @include box-shadow(none);
   text-shadow: none;
 }

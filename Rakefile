@@ -41,7 +41,7 @@ task :translate do
   end
 
   `patch -f #{scss_path}/_labels-badges.scss < labels_badges.patch`
-  `patch -f #{scss_path}/_variables.scss < image_path.patch`
+  `patch -f #{scss_path}/_variables.scss < variables.patch`
 
 end
 

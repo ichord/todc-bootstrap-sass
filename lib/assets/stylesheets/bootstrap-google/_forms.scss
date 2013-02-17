@@ -1,6 +1,6 @@
-// Forms.less
-// Base styles for various input types, form layouts, and states
-// -------------------------------------------------------------
+//
+// Forms
+// --------------------------------------------------
 
 
 // Form controls
@@ -25,6 +25,8 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   padding: 4px 8px;
+  font-size: $baseFontSize;
+  @include border-radius($inputBorderRadius);
 }
 
 // Reset appearance properties for textual inputs and textarea
@@ -54,26 +56,23 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  border: 1px solid #d9d9d9;
-  border-top: 1px solid #c0c0c0;
-  @include border-radius($inputBorderRadius);
+  border: 1px solid $inputBorder;
+  border-top-color: darken($inputBorder, 10%);
   @include box-shadow(none);
   @include transition(none);
 
   &:hover {
     border: 1px solid #b9b9b9;
-    border-top: 1px solid #a0a0a0;
+    border-top-color: #a0a0a0;
     @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.1));
-    z-index: 2;
   }
 
   // Focus state
-  &:focus,
-  &.focused {
-    outline: none;
-    border: 1px solid #4d90fe;
-    @include transition(none);
+  &:focus {
+    outline: 0 \9;
+    border-color: #4d90fe;
     @include box-shadow(inset 0 1px 2px rgba(0,0,0,0.3));
+    @include transition(none);
   }
 }
 
@@ -124,7 +123,7 @@ input[type="radio"]:checked {
   background: #fff;
 }
 input[type="checkbox"]:checked::after {
-  content: url($iconCheckMarkPath);
+  content: url(../img/checkmark.png);
   display: block;
   position: absolute;
   top: -6px;
@@ -167,7 +166,7 @@ input[readonly],
 select[readonly],
 textarea[readonly] {
   cursor: not-allowed;
-  border: 1px solid #d9d9d9;
+  border: 1px solid $inputBorder;
 
   &:hover,
   &:focus {

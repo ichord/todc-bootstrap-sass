@@ -1,0 +1,39 @@
+diff --git a/lib/assets/stylesheets/bootstrap-google/_variables.scss b/lib/assets/stylesheets/bootstrap-google/_variables.scss
+index 623363e..b181f09 100644
+--- a/lib/assets/stylesheets/bootstrap-google/_variables.scss
++++ b/lib/assets/stylesheets/bootstrap-google/_variables.scss
+@@ -154,8 +154,11 @@ $zindexFixedGooglenav:    1028;
+ 
+ // Sprite icons path
+ // -------------------------
+-$iconSpritePath:          "../img/glyphicons-halflings.png";
+-$iconWhiteSpritePath:     "../img/glyphicons-halflings-white.png";
++$iconSpritePath:          image-path("glyphicons-halflings.png");
++$iconWhiteSpritePath:     image-path("glyphicons-halflings-white.png");
++
++// google checkbox icon
++$iconCheckMarkPath:       image-path("checkmark.png");
+ 
+ 
+ // Input placeholder text color
+@@ -245,16 +248,16 @@ $navbarGoogleBarInverseBorder:                    $grayDark;
+ $navbarGoogleBarInverseText:                      $grayLight;
+ $navbarGoogleBarInverseLinkColor:                 $white;
+ $navbarGoogleBarInverseLinkColorHover:            $white;
+-$navbarGoogleBarInverseLinkColorActive:           $navbarGoogleNavInverseLinkColorHover;
++$navbarGoogleBarInverseLinkColorActive:           $navbarGoogleBarInverseLinkColorHover;
+ $navbarGoogleBarInverseLinkBackgroundHover:       transparent;
+-$navbarGoogleBarInverseLinkBackgroundActive:      $navbarGoogleNavInverseBackground;
++$navbarGoogleBarInverseLinkBackgroundActive:      $navbarGoogleBarInverseBackground;
+ 
+ $navbarGoogleBarInverseSearchBackground:          lighten($navbarInverseBackground, 25%);
+ $navbarGoogleBarInverseSearchBackgroundFocus:     $white;
+-$navbarGoogleBarInverseSearchBorder:              $navbarGoogleNavInverseBackground;
++$navbarGoogleBarInverseSearchBorder:              $navbarGoogleBarInverseBackground;
+ $navbarGoogleBarInverseSearchPlaceholderColor:    #ccc;
+ 
+-$navbarGoogleBarInverseBrandColor:                $navbarGoogleNavInverseLinkColor;
++$navbarGoogleBarInverseBrandColor:                $navbarGoogleBarInverseLinkColor;
+ 
+ // Googlenav
+ // -------------------------

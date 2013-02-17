@@ -1,5 +1,7 @@
-// DROPDOWN MENUS
-// --------------
+//
+// Dropdown menus
+// --------------------------------------------------
+
 
 // The dropdown menu (ul)
 // ----------------------
@@ -93,7 +95,7 @@
 
 // Caret to indicate there is a submenu
 .dropdown-submenu > a:after {
-  border-left-color: #808080;
+  border-left-color: darken($dropdownBackground, 50%);
   margin-right: -20px;
 }
 .dropdown-submenu:hover > a:after {
