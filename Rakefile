@@ -30,7 +30,7 @@ task :translate do
 
   Dir["#{less_path}/*.less"].each do |less|
     File.open(less) do |lf|
-      buffer = lf.read.gsub(/@((?!mixin|include|while|import|media)\S+)/, "$\\1") # translate less variable: @color -> $color
+      buffer = lf.read.gsub(/@((?!mixin|include|while|import|media)\w+)/, "$\\1") # translate less variable: @color -> $color
         .gsub(/^\.(\S+)(\s?)\(/, "@mixin \\1\\2(") # translate less mixin defination: .box-shadow(xxxxxx) { -> @mixin box-shadown(xxxx) {
         .gsub(/\s\.(\S+)(\s?)\(/, " @include \\1\\2(") # translate less function: .box-shadow(xxxx) -> @include box-shadow(xxxx)
         .gsub(/#(\S+) > @include (\S+)\(/, "@include \\1-\\2(") # translate special less fucntion: #aaa > .bbb()  -> @include aaa-bbb()
@@ -39,9 +39,21 @@ task :translate do
       File.open("tmp/scss/_#{File.basename(less, ".*")}.scss", 'w+') { |f| f.write buffer }
     end
   end
-  FileUtils.mv "#{scss_path}/_mixins.scss", "#{scss_path}/_google-mixins.scss"
 
   `patch -f #{scss_path}/_labels-badges.scss < labels_badges.patch`
   `patch -f #{scss_path}/_variables.scss < image_path.patch`
 
+end
+
+desc "upgrade from todc-bootstrap"
+task :upgrade => [:translate] do
+  scss_path = "tmp/scss"
+  dist = "lib/assets/stylesheets/bootstrap-google"
+
+  FileUtils.mv "#{scss_path}/_mixins.scss", "#{scss_path}/_google-mixins.scss"
+  FileUtils.rm "#{scss_path}/_todc-bootstrap.scss"
+
+  Dir["#{scss_path}/*.scss"].each do |f|
+    FileUtils.mv f, "#{dist}"
+  end
 end
