@@ -8,7 +8,8 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{google style for bootstrap}
   gem.homepage      = "https://github.com/ichord/bootstrap-google-sass"
 
-  gem.files         = `git ls-files`.split($\)
+  # gem.files         = `git ls-files`.split($\)
+  gem.files         = Dir["lib/**/*"] + ["README.md", "LICENSE"]
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "bootstrap-google-sass"
@@ -18,5 +19,5 @@ Gem::Specification.new do |gem|
 
   gem.add_development_dependency 'compass'
   gem.add_development_dependency 'sass-rails', '~> 3.2'
-  gem.add_runtime_dependency     'sass',       '~> 3.2'  
+  gem.add_runtime_dependency     'sass',       '~> 3.2'
 end

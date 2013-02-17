@@ -26,7 +26,6 @@ task :translate do
   scss_path = 'tmp/scss'
 
   `git clone git://github.com/todc/todc-bootstrap.git #{todc_path}`
-  FileUtils.rm_r "#{scss_path}"
   FileUtils.mkdir_p scss_path
 
   Dir["#{less_path}/*.less"].each do |less|
