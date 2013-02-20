@@ -123,7 +123,7 @@ input[type="radio"]:checked {
   background: #fff;
 }
 input[type="checkbox"]:checked::after {
-  content: url(../img/checkmark.png);
+  content: url($iconCheckMarkPath);
   display: block;
   position: absolute;
   top: -6px;

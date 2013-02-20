@@ -36,6 +36,7 @@ task :translate do
         .gsub(/#(\S+) > @include (\S+)\(/, "@include \\1-\\2(") # translate special less fucntion: #aaa > .bbb()  -> @include aaa-bbb()
         .gsub(/\(~"(.+)"\)/,"(\\1)") # replace less escaping tag ~: box-shadow(~"xxx,x,x,x,xx,")
         .gsub(/e\("(\S+)"\)/,"\\1") # replace e('\9')
+        .gsub(/\.\.\/img\/checkmark\.png/, "$iconCheckMarkPath")
       File.open("tmp/scss/_#{File.basename(less, ".*")}.scss", 'w+') { |f| f.write buffer }
     end
   end

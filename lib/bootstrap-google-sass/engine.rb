@@ -1,7 +1,8 @@
 module Bootstrap
   module Google
     module Sass
-      VERSION = "0.0.4"
+      class Engine < ::Rails::Engine
+      end
     end
   end
 end
