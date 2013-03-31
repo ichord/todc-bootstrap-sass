@@ -11,7 +11,11 @@ end
 
 desc "sync bootstrap-sass"
 task :sync do
-  `git clone git://github.com/thomas-mcdonald/bootstrap-sass.git tmp/bootstrap-sass`
+  if File.exists? "tmp/bootstrap-sass"
+    `cd tmp/bootstrap-sass && git pull`
+  else
+    `git clone git://github.com/thomas-mcdonald/bootstrap-sass.git tmp/bootstrap-sass`
+  end
 end
 
 desc 'Dumps output to a CSS file for testing'
@@ -25,7 +29,12 @@ task :translate do
   less_path = "#{todc_path}/less"
   scss_path = 'tmp/scss'
 
-  `git clone git://github.com/todc/todc-bootstrap.git #{todc_path}`
+  if File.exists? todc_path
+    `cd #{todc_path} && git pull`
+  else
+    `git clone git://github.com/todc/todc-bootstrap.git #{todc_path}`
+  end
+
   FileUtils.mkdir_p scss_path
 
   Dir["#{less_path}/*.less"].each do |less|
