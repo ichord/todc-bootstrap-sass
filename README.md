@@ -28,7 +28,7 @@ just like it:
 ```scss
 
 @import "bootstrap";
-@import "bootstrap-google":
+@import "bootstrap-google";
 
 ```
 
