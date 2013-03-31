@@ -25,7 +25,7 @@ module Bootstrap
 
 		  private
 		  def self.asset_pipeline?
-		    defined?(::Rails) && ::Rails.version >= '3.1.0'
+		    defined?(::Rails) && ::Rails.version.to_s >= '3.1.0'
 		  end
 
 		  def self.compass?
