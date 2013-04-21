@@ -1,11 +1,11 @@
 # Bootstrap::Google::Sass
 
-The scss files are translated form [TODC Bootstrap](http://todc.github.com/todc-bootstrap/) project.
+This is a `sass` edition of the [TODC Bootstrap](http://todc.github.com/todc-bootstrap/) project.  
+It's more like a patch!! so it must be work with another `bootstrap` gem such as [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)  
 
-This is the `sass` edition of the [google-bootstrap](http://todc.github.com/google-bootstrap) project.  
-Now, it's Non-Rails supported now.
+## For Rails 3
 
-## Installation
+### Installation
 
 Add this line to your application's Gemfile:
 
@@ -19,10 +19,10 @@ Or install it yourself as:
 
     $ gem install bootstrap-google-sass
 
-## Usage
+### Usage
 
 For now, just support `rails 3+`  
-It more like a patch!! so it must work with another `bootstrap` gem such as [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)  
+
 just like it:
 
 ```scss
@@ -34,7 +34,20 @@ just like it:
 
 and then, enjoy it.
 
-### One more thing.
+## For Campass
+
+### Config
+
+require them in `config.rb` file of **Compass**
+
+```ruby
+
+require 'bootstrap-sass'
+require 'bootstrap-google-sass'
+
+```
+
+## One more thing.
 You can now running testing by issue `rake test`.  
 And, issue `rake css` to generate a full support `css` edition without another gem and css file.
 
