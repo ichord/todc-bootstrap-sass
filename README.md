@@ -1,7 +1,7 @@
 This is a `sass` edition of the [TODC Bootstrap](http://todc.github.com/todc-bootstrap/) project.  
 It's more like a patch!! so it must be work with another `bootstrap` gem such as [bootstrap-sass](https://github.com/thomas-mcdonald/bootstrap-sass)  
 
-PS. It is changed name from `bootstrap-google-sass`.
+PS. It is changed name from `bootstrap-google-sass`. And I'm sorry I have yanked all that gems.(Can't rescue it now...)
 
 ## For Rails 3
 
