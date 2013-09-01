@@ -20,7 +20,7 @@ end
 
 desc 'Dumps output to a CSS file for testing'
 task :css => :sync do
-  File.open("./bootstrap-google.final.css", 'w') { |f| f.write(sass_engine.render) }
+  File.open("./todc-bootstrap.final.css", 'w') { |f| f.write(sass_engine.render) }
 end
 
 desc 'Translate less to scss'
@@ -58,9 +58,9 @@ end
 desc "upgrade from todc-bootstrap"
 task :upgrade => [:translate] do
   scss_path = "tmp/scss"
-  dist = "lib/assets/stylesheets/bootstrap-google"
+  dist = "lib/assets/stylesheets/todc-bootstrap"
 
-  FileUtils.mv "#{scss_path}/_mixins.scss", "#{scss_path}/_google-mixins.scss"
+  FileUtils.mv "#{scss_path}/_mixins.scss", "#{scss_path}/_todc-mixins.scss"
   FileUtils.rm "#{scss_path}/_todc-bootstrap.scss"
 
   Dir["#{scss_path}/*.scss"].each do |f|

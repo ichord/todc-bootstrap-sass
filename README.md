@@ -9,7 +9,7 @@ It's more like a patch!! so it must be work with another `bootstrap` gem such as
 
 Add this line to your application's Gemfile:
 
-    gem 'bootstrap-google-sass'
+    gem 'todc-bootstrap-sass'
 
 And then execute:
 
@@ -17,7 +17,7 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install bootstrap-google-sass
+    $ gem install todc-bootstrap-sass
 
 ### Usage
 
@@ -28,7 +28,7 @@ just like it:
 ```scss
 
 @import "bootstrap";
-@import "bootstrap-google";
+@import "todc-bootstrap";
 
 ```
 
@@ -43,7 +43,7 @@ require them in `config.rb` file of **Compass**
 ```ruby
 
 require 'bootstrap-sass'
-require 'bootstrap-google-sass'
+require 'todc-bootstrap-sass'
 
 ```
 
